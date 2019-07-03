@@ -7,6 +7,7 @@ import cv2
 import numpy as np
 import tensorflow as tf
 import time
+import pythonosc
 
 from tf_pose import common
 from tf_pose.common import CocoPart
@@ -406,10 +407,11 @@ class TfPoseEstimator:
                                       int(body_part.y * image_h + 0.5))  # added
                 centers[i] = center
 
-            # chech data
+            # check data
             body_parts_name = ['Nose', 'Heart', 'R-Shoulder', 'R-Elbow', 'R-Wrist',
                                'L-Shoulder', 'L-Elbow', 'L-Wrist', 'R-Waist', 'R-Knee',
-                               'R-Ankle', 'L-Waist', 'L-Knee', 'L-Ankle', 'R-Eye', 'L-Eye', 'R-Ear', 'L-Ear']
+                               'R-Ankle', 'L-Waist', 'L-Knee', 'L-Ankle', 'R-Eye', 'L-Eye', 'R-Ear', 'L-Ear'] #Added
+                               
             print(human)
             for k, v in position_values.items():
                 logger.info("body parts ={}, position={}".format(body_parts_name[k], v))  # v is tuple of position (x: int, y: int)
