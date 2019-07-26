@@ -510,26 +510,7 @@ class TfPoseEstimator:
             
             for k, v in position_values.items():
                 logger.info("body parts ={}, position={}".format(body_parts_name[k], v))  # v is tuple of position (x: int, y: int)
-
-#                if centers == 0
-#                or centers == 1
-#                or centers == 2
-#                or centers == 3
-#                or centers == 4
-#                or centers == 5
-#                or centers == 6
-#                or centers == 7
-#                or centers == 8
-#                or centers == 9
-#                or centers == 10
-#                or centers == 11
-#                or centers == 12
-#                or centers == 13
-#                or centers == 14
-#                or centers == 15
-#                or centers == 16
-#                or centers == 17:
-#                print(centers)
+                
                 cv2.circle(npimg, center, 3, common.CocoColors[i], thickness=3, lineType=8, shift=0)
 
 

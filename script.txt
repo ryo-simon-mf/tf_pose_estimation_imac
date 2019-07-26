@@ -1,0 +1,1 @@
+tf-pose-estimation$ python run_webcam_3.py --model=mobilenet_v2_small --resize=432x368 --camera=0
